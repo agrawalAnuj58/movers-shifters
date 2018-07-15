@@ -40,7 +40,7 @@ public class register extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
+        getSupportActionBar().hide();
         e1 = findViewById(R.id.editText);
         e2 = findViewById(R.id.editText2);
         e3 = findViewById(R.id.editText3);

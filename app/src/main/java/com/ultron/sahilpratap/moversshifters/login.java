@@ -35,6 +35,7 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.List;
 
 public class login extends AppCompatActivity {
 
@@ -51,7 +52,7 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+         getSupportActionBar().hide();
         url="https://first-android.000webhostapp.com/getdata_login.php";
 
         e1 = findViewById(R.id.editText);
@@ -117,13 +118,9 @@ public class login extends AppCompatActivity {
                 httpPost = new HttpPost(url);
                 httpPost.setEntity(new UrlEncodedFormEntity(params));
                 httpClient.execute(httpPost);
-            }catch (Exception e){}
-
-            try{
                 httpPost.setHeader("Content-type", "application/json");
                 HttpResponse httpResponse = httpClient.execute(httpPost);
                 HttpEntity entity = httpResponse.getEntity();
-
                 inputStream = entity.getContent();
 
                 //json is UTF-8 by default
@@ -138,19 +135,13 @@ public class login extends AppCompatActivity {
                     sb.append(line + "\n");
                 }
                 result = sb.toString();
+                inputStream.close();
+                return result;
             } catch (Exception e) {
 
-
-            } finally {
-
-                try {
-                    if (inputStream != null)
-                        inputStream.close();
-
-                } catch (Exception e) {
-                }
-                }
-
+                Log.i("jdajdnash","ff");
+            }
+            Log.i("asdf",result);
             return result;
 
         }
@@ -181,9 +172,9 @@ public class login extends AppCompatActivity {
             JSONArray jsonArray = jsonObject.getJSONArray(TAG_RESULT);
 
             if(jsonArray.length() != 0) {
-                response = false;
-            } else
                 response = true;
+            } else
+                response = false;
         } catch (JSONException e6){
 
             Toast.makeText(login.this,"aszxzvd",Toast.LENGTH_LONG).show();
