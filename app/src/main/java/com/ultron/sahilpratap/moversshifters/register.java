@@ -1,6 +1,7 @@
 package com.ultron.sahilpratap.moversshifters;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -40,7 +41,6 @@ public class register extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
         e1 = findViewById(R.id.editText);
         e2 = findViewById(R.id.editText2);
         e3 = findViewById(R.id.editText3);
@@ -80,6 +80,10 @@ public class register extends AppCompatActivity {
                 passNew = e5.getText().toString();
 
                 new Dataprocess().execute();
+
+                Intent intent = new Intent(register.this,MainActivity.class);
+                startActivity(intent);
+
             }
         });
 
