@@ -8,4 +8,5 @@
     <color name="hintcolor">#706f6f</color>
     <color name="textcolor">#FFFCFAFA</color>
     <color name="button">#FFDEBB3C</color>
+    <color name="view">#FFA1A0A0</color>
 </resources>

@@ -5,33 +5,48 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:id="@+id/nav_booking"
+            android:icon="@drawable/ic_access_time_black_24dp"
+            android:title="My Bookings" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:id="@+id/nav_booking_new"
+            android:icon="@drawable/car_icon"
+            android:title="Make Booking" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:id="@+id/track"
+            android:icon="@drawable/car_icon"
+            android:title="Track Vehicle" />
+
+
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/promotion"
+            android:icon="@drawable/star"
+            android:title="Promotion" />
+        <item
+            android:id="@+id/nav_account"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="My Account" />
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Share" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Other">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:id="@+id/nav_contact"
+                android:icon="@drawable/ic_contact_mail_black_24dp"
+                android:title="Contact" />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/nav_about"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:title="About" />
+
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@drawable/ic_feedback_black_24dp"
+                android:title="Feedback" />
         </menu>
     </item>
 
